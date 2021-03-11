@@ -5,4 +5,34 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	border: 3px solid #ddd;
+	padding: 0.5rem;
+}
+
+#display {
+	text-align: center;
+	background: #ddd;
+	font-size: 1.125rem;
+	padding: 1rem 0;
+	margin-bottom: 0.5rem;
+}
+
+#drum-pads {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0.5rem;
+}
+
+.drum-pad {
+	padding: 1.5rem;
+	font-size: 1.25rem;
+	outline: none;
 }
