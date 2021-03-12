@@ -14,4 +14,19 @@ const App = () => {
 	);
 };
 
+document.addEventListener("keydown", e => {
+	const id = e.key.toUpperCase();
+	const audio = document.getElementById(id);
+
+	if (audio) {
+		const parent = audio.parentNode;
+		parent.classList.add("active");
+		audio.play();
+
+		audio.addEventListener("ended", () => {
+			parent.classList.remove("active");
+		});
+	}
+});
+
 export default App;
