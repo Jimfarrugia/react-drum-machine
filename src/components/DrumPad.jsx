@@ -5,16 +5,18 @@ const DrumPad = ({ clip }) => {
 
 	const playSound = () => audioRef.current.play();
 
+	const { filename, trigger } = clip;
+
 	return (
 		<button
-			id={clip.filename}
+			id={filename}
 			type="button"
 			className="drum-pad"
 			onClick={playSound}
 		>
-			{clip.trigger}
-			<audio id={clip.trigger} className="clip" ref={audioRef}>
-				<source src={`/sounds/${clip.filename}.wav`} type="audio/mpeg" />
+			{trigger}
+			<audio id={trigger} className="clip" ref={audioRef}>
+				<source src={`/sounds/${filename}.wav`} type="audio/mpeg" />
 			</audio>
 		</button>
 	);
