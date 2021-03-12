@@ -6,9 +6,9 @@ const App = () => {
 		<div id="drum-machine" className="container">
 			<div id="display">Display</div>
 			<div id="drum-pads">
-				{clips.map((clip, index) => {
-					return <DrumPad key={`clip${index}`} clip={clip} />;
-				})}
+				{clips.map((clip, index) => (
+					<DrumPad key={`clip${index}`} clip={clip} />
+				))}
 			</div>
 		</div>
 	);
