@@ -15,9 +15,12 @@ const DrumPad = ({ clip }) => {
 			onClick={playSound}
 		>
 			{trigger}
-			<audio id={trigger} className="clip" ref={audioRef}>
-				<source src={`/sounds/${filename}.wav`} type="audio/mpeg" />
-			</audio>
+			<audio
+				id={trigger}
+				className="clip"
+				ref={audioRef}
+				src={`/sounds/${filename}.wav`}
+			/>
 		</button>
 	);
 };
