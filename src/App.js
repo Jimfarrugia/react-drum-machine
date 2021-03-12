@@ -7,13 +7,7 @@ const App = () => {
 			<div id="display">Display</div>
 			<div id="drum-pads">
 				{clips.map((clip, index) => {
-					return (
-						<DrumPad
-							key={`clip${index}`}
-							clip={clip}
-							onClick={() => console.log(`clicked ${clip.trigger}`)}
-						/>
-					);
+					return <DrumPad key={`clip${index}`} clip={clip} />;
 				})}
 			</div>
 		</div>
