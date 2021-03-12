@@ -2,10 +2,8 @@ import { useRef } from "react";
 
 const DrumPad = ({ clip }) => {
 	const audioRef = useRef(null);
-
-	const playSound = () => audioRef.current.play();
-
 	const { filename, trigger } = clip;
+	const playSound = () => audioRef.current.play();
 
 	return (
 		<button
