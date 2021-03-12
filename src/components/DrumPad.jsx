@@ -1,8 +1,8 @@
 import { useRef } from "react";
 
-const DrumPad = ({ clip }) => {
+const DrumPad = ({ clip, setCurrentClip }) => {
 	const audioRef = useRef(null);
-	const { filename, trigger } = clip;
+	const { filename, trigger, name } = clip;
 	const playSound = () => audioRef.current.play();
 
 	return (
@@ -10,7 +10,10 @@ const DrumPad = ({ clip }) => {
 			id={filename}
 			type="button"
 			className="drum-pad"
-			onClick={playSound}
+			onClick={() => {
+				playSound();
+				setCurrentClip(name);
+			}}
 		>
 			{trigger}
 			<audio
